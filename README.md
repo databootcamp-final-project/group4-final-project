@@ -2,7 +2,7 @@
 
 ## Proposal For Final Project 
 
-This document contains the proposal for our final project : Predicting Salary Incomes for Different Careers and Colleges.
+This document contains the proposal for our final project: Predicting future stock prices based on the history of their indexes. 
 
 
 ## Team Members (Group # 4) 
@@ -14,33 +14,35 @@ This document contains the proposal for our final project : Predicting Salary In
 
 ## Project Proposal
 
-For our final project, we will build an application to analyze what the salary levels are for different majors, college types and regions. 
+For our final project, we will build an application to analyze and predict the future price of stocks by modeling couples of company indexes as the model for our ML. 
 
-It is probably easy to predict what your starting salary will be depending on the major, college type or college that you are planning to attend.  But what about earnings during mid-career and later? With this project, we analyze the salary trends for starting and mid-career for different majors, college types and locations.  Can our model successfully predict these salary levels?
-
+we will be looking at the opening, closing, the low and the High of couple of indexes, split, train and test their data to come up with a working model and successful prediction.
 We will use the following tools : 
 
 Data cleaning : Pandas
 
-Visualizations : Tableau, HTML
+Visualizations : Plotly, HTML, CSS
 
 Database : Postgres
 
-Machine Learning: GridSearchCV
+Machine Learning: GridSearchCV,Linear Regression, TensorFlow
 
 Deployment : Heroku
 
 
 ## Data Sets
 
-### [Kaggle: Where it Pays to Attend College](https://www.kaggle.com/wsj/college-salaries)
-### Salaries by college, region, and academic major
+### Historical Stock Prices
 
-[Degrees That Pay Back](https://www.kaggle.com/wsj/college-salaries?select=degrees-that-pay-back.csv)
+[Daily Historical Stock Prices (1970 - 2018)](https://www.kaggle.com/ehallmar/daily-historical-stock-prices-1970-2018)
 
-[Salaries By College Type](https://www.kaggle.com/wsj/college-salaries?select=salaries-by-college-type.csv)
+[]()
 
-[Salaries By Region](https://www.kaggle.com/wsj/college-salaries?select=salaries-by-region.csv)
+[]()
+
+[]()
+
+[]()
 
 
 ---
