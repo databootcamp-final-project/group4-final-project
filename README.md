@@ -16,7 +16,8 @@ This document contains the proposal for our final project: Predicting future sto
 
 For our final project, we will build an application to analyze and predict the future price of stocks by modeling couples of company indexes as the model for our ML. 
 
-we will be looking at the opening, closing, the low and the High of couple of indexes, split, train and test their data to come up with a working model and successful prediction.
+We will be looking at the opening, closing, the low and the high price of a few indexes (companies), split, train and test their data to come up with a working model and successful prediction.
+
 We will use the following tools : 
 
 Data cleaning : Pandas
