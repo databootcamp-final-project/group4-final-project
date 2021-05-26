@@ -26,7 +26,7 @@ Visualizations : HTML, CSS, Tableau
 
 Database : Postgres
 
-Machine Learning: GridSearchCV, Linear Regression, TensorFlow
+Machine Learning: Linear Regression, TensorFlow
 
 Deployment : Heroku
 
