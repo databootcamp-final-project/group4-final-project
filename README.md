@@ -35,6 +35,16 @@ Deployment : Heroku
 Our ultimate goal for the training data is to have a 'snapshot' of a particular stock at a particular time, and its performance of a determined period of time.
 
 
+## Machine Evaluation
+
+We will evaluate our machine learning findings by comparing our conclusion to last year of our data and compare the accuracy of our model.
+
+
+## Model Presentation
+
+Our Plan is to demonstrate our findings by presenting our codes via Jupyter notebook or VScode, we're also planning on using Tableau for plotting our Stocks graphs and lastly we'll be putting our final results into one website after we had ran our machine Locally and launching it on Heroku.
+
+
 ## Data Sets
 
 ### Historical Stock Prices
