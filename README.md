@@ -30,6 +30,10 @@ Machine Learning: GridSearchCV, Linear Regression, TensorFlow
 
 Deployment : Heroku
 
+## Creating the training dataset
+
+Our ultimate goal for the training data is to have a 'snapshot' of a particular stock's at a particular time, and its performance of a period of time.
+
 
 ## Data Sets
 
@@ -48,6 +52,8 @@ Deployment : Heroku
 [SBUX Historical Data](https://www.nasdaq.com/market-activity/stocks/sbux/historical)
 
 [CSCO Historical Data](https://www.nasdaq.com/market-activity/stocks/csco/historical)
+
+
 
 ---
 
