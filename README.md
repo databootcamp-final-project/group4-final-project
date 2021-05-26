@@ -5,7 +5,7 @@
 This document contains the proposal for our final project: Predicting future stock prices based on the history of their indexes. 
 
 
-## Team Members (Group # 4) 
+## Team Members (Group #4) 
 * Sam Azhari
 * Stephanie Rivas
 * Ian Castro
@@ -21,11 +21,11 @@ We will use the following tools :
 
 Data cleaning : Pandas
 
-Visualizations : Plotly, HTML, CSS
+Visualizations : HTML, CSS, Tableau
 
 Database : Postgres
 
-Machine Learning: GridSearchCV,Linear Regression, TensorFlow
+Machine Learning: GridSearchCV, Linear Regression, TensorFlow
 
 Deployment : Heroku
 
