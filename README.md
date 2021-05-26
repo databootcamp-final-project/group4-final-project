@@ -2,7 +2,7 @@
 
 ## Proposal For Final Project 
 
-This document contains the proposal for our final project: Predicting future stock prices based on the history of their indexes. 
+This document contains the proposal for our final project: Predicting future stock prices based on their historic data. 
 
 
 ## Team Members (Group #4) 
@@ -14,9 +14,9 @@ This document contains the proposal for our final project: Predicting future sto
 
 ## Project Proposal
 
-For our final project, we will build an application to analyze and predict the future price of stocks by modeling couples of company indexes as the model for our ML. 
+For our final project, we will build an application to analyze and predict the future price of stocks by modeling a couple of company indexes as the model for our ML. 
 
-We will be looking at the opening, closing, the low and the high price of a few indexes (companies), split, train and test their data to come up with a working model and successful prediction.
+We will be looking at the opening, closing, lowest and highest price of a few indexes (companies), split, train and test their data to come up with a working model and successful prediction.
 
 We will use the following tools : 
 
@@ -32,7 +32,7 @@ Deployment : Heroku
 
 ## Creating the training dataset
 
-Our ultimate goal for the training data is to have a 'snapshot' of a particular stock's at a particular time, and its performance of a period of time.
+Our ultimate goal for the training data is to have a 'snapshot' of a particular stock at a particular time, and its performance of a determined period of time.
 
 
 ## Data Sets
