@@ -22,7 +22,7 @@ We will use the following tools :
 
 Data cleaning : Pandas
 
-Visualizations : HTML, CSS, Tableau
+Visualizations : HTML, CSS, Tableau, plotly
 
 Database : Postgres
 
