@@ -35,17 +35,22 @@ Deployment : Heroku
 
 ### Historical Stock Prices
 
-[Daily Historical Stock Prices (1970 - 2018)](https://www.kaggle.com/ehallmar/daily-historical-stock-prices-1970-2018)
+[Most Popular Historical Data Pages](https://www.nasdaq.com/market-activity/quotes/historical)
 
-[]()
+[FB Historical Data](https://www.nasdaq.com/market-activity/stocks/fb/historical)
 
-[]()
+[AMZN Historical Data](https://www.nasdaq.com/market-activity/stocks/amzn/historical)
 
-[]()
+[MSFT Historical Data](https://www.nasdaq.com/market-activity/stocks/msft/historical)
 
-[]()
+[TSLA Historical Data](https://www.nasdaq.com/market-activity/stocks/tsla/historical)
 
+[SBUX Historical Data](https://www.nasdaq.com/market-activity/stocks/sbux/historical)
+
+[CSCO Historical Data](https://www.nasdaq.com/market-activity/stocks/csco/historical)
 
 ---
+
+
 
 
