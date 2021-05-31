@@ -176,8 +176,31 @@
 		<hr>
 
 		<h2 id="data_cleaning" class="mb-4">Data Cleaning</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+			We follow the same data cleaning process for each data set cotaining the stock price information.  After loading 
+			into a pandas dataframe, the "Date" column is converted from a string to datetime:
+		<p>
+			<pre>
+				<code>csco_df['Date']= pd.to_datetime(csco_df['Date'])</code>
+			</pre>
+			<p>
+			Then all monetary value strings are stripped of special characters to convert them to numbers:	
+			</p>
+
+			<pre>
+				<code>csco_df['Close/Last'] = csco_df['Close/Last'].str.replace('$','')
+csco_df['Open'] = csco_df['Open'].str.replace('$','')
+csco_df['High'] = csco_df['High'].str.replace('$','')
+csco_df['Low'] = csco_df['Low'].str.replace('$','')
+csco_df = csco_df.apply( pd.to_numeric)</code>
+			</pre>
+
+			<p>For the dataset used in our ARIMA analyis, we also sort the dataframe in ascending "Date" order:</p>
+			<pre><code>df.sort_values("Date", ascending=True, inplace=True)</code></pre>
+
+
+
+		</p>
         <a href="#">Back to top of page</a>
 		<hr>
 
@@ -274,7 +297,25 @@
 			<div class="col">
 		<a href="#">Back to Top</a>
 		<br>
-		<h3 id="ARIMA">Tesla</h3>
+		<h3 id="ARIMA">ARIMA Time Series Analysis</h3>
+		<p>
+			ARIMA is the acronym for <b>autoregressive integrated moving average</b>.  It is a generalization of the 
+			<b>autoregressive moving average model (ARMA)</b>, where a linear regression model approach is 
+			followed to model the behaviour of a variable (an observed value) during time.
+			Both models are fitted to time series data to better understand
+			the data or to predict future values in the series (forecasting).
+			<ul>
+				<li>
+					The <b>AR</b> part of the acronym indicates that the variable of interest is regressed on its own past values.
+				</li>
+				<li>
+					The <b>I</b> part indicates that the data has been replaced with the difference between each value and 
+						previous one. 
+				</li>
+				<li> The <b>MA</b> part indicates that the regresion error is a linear combination of error terms .
+				</li>
+			</ul>
+		</p>
 		<div class="embed-responsive embed-responsive-16by9">
 			<iframe class="embed-responsive-item" src="/ml/ARIMA" allowfullscreen></iframe>
 		</div>

@@ -154,12 +154,20 @@ code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1em; }
+  }
 
 pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto; }
+
+code {
+  font-size: 1em;
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
 
 figure {
   margin: 0 0 1rem; }
