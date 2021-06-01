@@ -2,10 +2,10 @@
 
 ## Proposal For Final Project 
 
-This document contains the proposal for our final project : Predicting Salary Incomes for Different Careers and Colleges.
+This document contains the proposal for our final project: Predicting future stock prices based on their historic data. 
 
 
-## Team Members (Group # 4) 
+## Team Members (Group #4) 
 * Sam Azhari
 * Stephanie Rivas
 * Ian Castro
@@ -14,33 +14,59 @@ This document contains the proposal for our final project : Predicting Salary In
 
 ## Project Proposal
 
-For our final project, we will build an application to analyze what the salary levels are for different majors, college types and regions. 
+For our final project, we will build an application to analyze and predict the future price of stocks by modeling a couple of company indexes as the model for our ML. 
+
+We will be looking at the opening, closing, lowest and highest price of a few indexes (companies), split, train and test their data to come up with a working model and successful prediction.
 
 We will use the following tools : 
 
 Data cleaning : Pandas
 
-Visualizations : Tableau, HTML
+Visualizations : HTML, CSS, Tableau, plotly
 
 Database : Postgres
 
-Machine Learning: GridSearchCV
+Machine Learning: Linear Regression, TensorFlow
 
 Deployment : Heroku
+
+## Creating the training dataset
+
+Our ultimate goal for the training data is to have a 'snapshot' of a particular stock at a particular time, and its performance of a determined period of time.
+
+
+## Machine Evaluation
+
+We will evaluate our machine learning findings by comparing our conclusion to last year of our data and compare the accuracy of our model.
+
+
+## Model Presentation
+
+Our Plan is to demonstrate our findings by presenting our codes via Jupyter notebook or VScode, we're also planning on using Tableau for plotting our Stocks graphs and lastly we'll be putting our final results into one website after we had ran our machine Locally and launching it on Heroku.
 
 
 ## Data Sets
 
-### [Kaggle: Where it Pays to Attend College](https://www.kaggle.com/wsj/college-salaries)
-### Salaries by college, region, and academic major
+### Historical Stock Prices
 
-[Degrees That Pay Back](https://www.kaggle.com/wsj/college-salaries?select=degrees-that-pay-back.csv)
+[Most Popular Historical Data Pages](https://www.nasdaq.com/market-activity/quotes/historical)
 
-[Salaries By College Type](https://www.kaggle.com/wsj/college-salaries?select=salaries-by-college-type.csv)
+[FB Historical Data](https://www.nasdaq.com/market-activity/stocks/fb/historical)
 
-[Salaries By Region](https://www.kaggle.com/wsj/college-salaries?select=salaries-by-region.csv)
+[AMZN Historical Data](https://www.nasdaq.com/market-activity/stocks/amzn/historical)
+
+[MSFT Historical Data](https://www.nasdaq.com/market-activity/stocks/msft/historical)
+
+[TSLA Historical Data](https://www.nasdaq.com/market-activity/stocks/tsla/historical)
+
+[SBUX Historical Data](https://www.nasdaq.com/market-activity/stocks/sbux/historical)
+
+[CSCO Historical Data](https://www.nasdaq.com/market-activity/stocks/csco/historical)
+
 
 
 ---
+
+
 
 

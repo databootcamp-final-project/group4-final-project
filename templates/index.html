@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Sidebar 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+  </head>
+  <body>
+	<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4 pt-5">
+		  		<h1><a href="{{ url_for('root')}}" class="logo">Final Project</a></h1>
+	        <ul class="list-unstyled components mb-5">
+	          <li class="active">
+	            <!-- <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Start</a> -->
+				<a href="{{ url_for('root')}}">Start</a>
+	            <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="#">Home 1</a>
+                </li>
+                <li>
+                    <a href="#">Home 2</a>
+                </li>
+                <li>
+                    <a href="#">Home 3</a>
+                </li>
+	            </ul> -->
+	          </li>
+	          <li>
+	              <a href="#data_sources">Data Sources</a>
+	          </li>
+	          <li>
+
+			  <a href="#data_cleaning">Data Cleaning</a>
+              <!-- <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="#">Page 1</a>
+                </li>
+                <li>
+                    <a href="#">Page 2</a>
+                </li>
+                <li>
+                    <a href="#">Page 3</a>
+                </li>
+              </ul>
+	          </li> -->
+
+			  <li>
+				  <a href="#MLSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Machine Learning</a>
+                  <ul class="collapse list-unstyled" id="MLSubmenu">
+                    <li>
+                      <a href="#AMZN">Amazon</a>
+                    </li>
+                    <li>
+                      <a href="#CSCO">Cisco Systems</a>
+                    </li>
+                    <li>
+                      <a href="#FB">Facebook</a>
+                    </li>
+					<li>
+					  <a href="#MSFT">Microsoft</a>
+					</li>
+					<li>
+						<a href="#SBUX">Starbucks</a>
+					</li>
+					<li>
+						<a href="#TSLA">Tesla</a>
+					</li>
+					<li>
+						<a href="#ARIMA">ARIMA Model</a>
+					</li>
+                  </ul>
+	          </li>
+
+	          <li>
+              <a href="#visualizations">Visualizations</a>
+	          </li>
+			  <li>
+				<a href="#conclusion">Conclusions</a>
+			  </li>
+			  <li>
+				<a href="#see_also">See Also</a>
+			  </li>
+	        </ul>
+
+	     <!--<div class="mb-5">
+						<h3 class="h6">Subscribe for newsletter</h3>
+						<form action="#" class="colorlib-subscribe-form">
+	            <div class="form-group d-flex">
+	            	<div class="icon"><span class="icon-paper-plane"></span></div>
+	              <input type="text" class="form-control" placeholder="Enter Email Address">
+	            </div>
+	          </form>
+			</div> -->
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 class="mb-4">Predicting Stock Prices Using ML Models</h2>
+        <p>In this project, we try to determine if machine learning can be used as an effective tool to 
+			predict the market prices of the stock for some large companies. 
+		</p>
+
+		<p>We looked at the opening, closing, lowest and highest price of a few indexes (companies), split, train and test 
+			their data to come up with a working model for prediction.
+		</p>
+			
+			We used the following tools :
+			<ul>
+			  <li>Data cleaning : <a href="https://pandas.pydata.org">Pandas</a> : a fast, powerful, flexible and easy to use open 
+				  source data analysis and manipulation tool, built on top of the Python programming language.
+			  </li>
+			
+			  <li>Visualizations : HTML, CSS, <a href="https://www.tableau.com">Tableau</a>, 
+				  <a href="https://plotly.com/graphing-libraries/">Plotly Graphing Libraries</a>,
+				  <a href="https://www.matplotlib.com">Matplotlib</a>
+			  </li>
+			
+			  <li>Machine Learning: Linear Regression, 
+				  <a href="https://www.tensorflow.org/">TensorFlow</a>, 
+				  <a href="https://numpy.org/doc/stable/user/index.html">Numpy</a>, 
+				  <a href="https://pypi.org/project/pmdarima/">pmdarima </a>(Time Series Analysis for Python),
+				  <a href="https://www.statsmodels.org/stable/index.html">statsmodels</a> (statistical models, 
+				  hypothesis tests, and data exploration.)
+				</li>
+			
+			  <li>Deployment : This page, deployed at <a href="https://www.heroku.com/">Heroku</a>
+			</li>
+			</ul>
+        <hr>
+
+		<h2 id="data_sources" class="mb-4">Data Sources</h2>
+        <p>
+			<a href="https://www.nasdaq.com/market-activity/quotes/historical">Most Popular Stocks Historical Data Pages</a>
+		</p>
+		<p>
+			<a href="https://www.nasdaq.com/market-activity/stocks/fb/historical">FB Historical Data</a>
+		</p>
+		<p>
+			<a href="https://www.nasdaq.com/market-activity/stocks/amzn/historical">AMZN Historical Data</a>
+		</p>
+		<p>	
+			<a href="https://www.nasdaq.com/market-activity/stocks/msft/historical">MSFT Historical Data</a>
+		</p>
+		<p>
+			<a href="https://www.nasdaq.com/market-activity/stocks/tsla/historical">TSLA Historical Data</a>
+		</p>
+		<p>
+			<a href="(https://www.nasdaq.com/market-activity/stocks/sbux/historical">SBUX Historical Data</a>
+		</p>
+		<p>
+			<a href="https://www.nasdaq.com/market-activity/stocks/csco/historical">CSCO Historical Data</a>
+		</p>
+        
+        <a href="#">Back to top of page</a>
+		<hr>
+
+		<h2 id="data_cleaning" class="mb-4">Data Cleaning</h2>
+        <p>
+			We follow the same data cleaning process for each data set cotaining the stock price information.  After loading 
+			into a pandas dataframe, the "Date" column is converted from a string to datetime:
+		<p>
+			<pre>
+				<code>csco_df['Date']= pd.to_datetime(csco_df['Date'])</code>
+			</pre>
+			<p>
+			Then all monetary value strings are stripped of special characters to convert them to numbers:	
+			</p>
+
+			<pre>
+				<code>csco_df['Close/Last'] = csco_df['Close/Last'].str.replace('$','')
+csco_df['Open'] = csco_df['Open'].str.replace('$','')
+csco_df['High'] = csco_df['High'].str.replace('$','')
+csco_df['Low'] = csco_df['Low'].str.replace('$','')
+csco_df = csco_df.apply( pd.to_numeric)</code>
+			</pre>
+
+			<p>For the dataset used in our ARIMA analyis, we also sort the dataframe in ascending "Date" order:</p>
+			<pre><code>df.sort_values("Date", ascending=True, inplace=True)</code></pre>
+
+
+
+		</p>
+        <a href="#">Back to top of page</a>
+		<hr>
+
+		<h2 id="machine_learning" class="mb-4">Machine Learning</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+		<div class="row">
+			<div class="col">
+					<h3 id="AMZN">Amazon</h3>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="/ml/AMZN" allowfullscreen></iframe>
+					</div>
+					<a href="#machine_learning">Back to ML Section</a>
+					<br>
+					<a href="#">Back to Top</a>
+					<br>
+				</div>
+			</div>
+
+
+		<div class="row">
+			<div class="col">
+				<h3 id="CSCO">Cisco Systems</h3>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="/ml/CSCO" allowfullscreen></iframe>
+				</div>
+				<a href="#machine_learning">Back to ML Section</a>
+				<br>
+				<a href="#">Back to Top</a>
+				<br>
+		    </div>
+		</div>
+
+		<div class="row">
+		  <div class="col">
+			<h3 id="FB">Facebook</h3>
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="/ml/FB" allowfullscreen></iframe>
+			</div>
+			<a href="#machine_learning">Back to ML Section</a>
+			<br>
+			<a href="#">Back to Top</a>
+			<br>
+		  </div>
+		</div>
+
+
+		<div class="row">
+			<div class="col">
+		<h3 id="MSFT">Microsoft</h3>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="/ml/MSFT" allowfullscreen></iframe>
+		</div>
+		<a href="#machine_learning">Back to ML Section</a>
+		  <br>
+		<a href="#">Back to Top</a>
+		<br>
+        </div>
+		</div>
+
+
+		<div class="row">
+			<div class="col">
+		<h3 id="SBUX">Starbucks</h3>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="/ml/SBUX" allowfullscreen></iframe>
+		</div>
+		<a href="#machine_learning">Back to ML Section</a>
+		  <br>
+        </div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col">
+		<a href="#">Back to Top</a>
+		<br>
+		<h3 id="TSLA">Tesla</h3>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="/ml/TSLA" allowfullscreen></iframe>
+		</div>
+		<a href="#machine_learning">Back to ML Section</a>
+		  <br>
+		  </div>
+		  </div>
+
+
+		<a href="#">Back to Top</a>
+		<hr>
+
+		<div class="row">
+			<div class="col">
+		<a href="#">Back to Top</a>
+		<br>
+		<h3 id="ARIMA">ARIMA Time Series Analysis</h3>
+		<p>
+			ARIMA is the acronym for <b>autoregressive integrated moving average</b>.  It is a generalization of the 
+			<b>autoregressive moving average model (ARMA)</b>, where a linear regression model approach is 
+			followed to model the behaviour of a variable (an observed value) during time.
+			Both models are fitted to time series data to better understand
+			the data or to predict future values in the series (forecasting).
+			<ul>
+				<li>
+					The <b>AR</b> part of the acronym indicates that the variable of interest is regressed on its own past values.
+				</li>
+				<li>
+					The <b>I</b> part indicates that the data has been replaced with the difference between each value and 
+						previous one. 
+				</li>
+				<li> The <b>MA</b> part indicates that the regresion error is a linear combination of error terms .
+				</li>
+			</ul>
+		</p>
+		<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="/ml/ARIMA" allowfullscreen></iframe>
+		</div>
+		<a href="#machine_learning">Back to ML Section</a>
+		  <br>
+		  </div>
+		  </div>
+
+
+		<a href="#">Back to Top</a>
+		<hr>
+
+
+
+		<h2 id="visualizations" class="mb-4">Visualizations</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+	<div class="row">
+	  <div class="col-md-6">
+		  
+		
+		<!-- Micro$oft -->
+		<div class='tableauPlaceholder' id='viz1622306314753' style='position: relative'>
+			<noscript><a href='#'><img alt='Microsoft ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFmsft&#47;Microsoft&#47;1_rss.png' style='border: none' /></a></noscript>
+			<object class='tableauViz'  style='display:none;'>
+			   <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			   <param name='embed_code_version' value='3' />
+			   <param name='site_root' value='' />
+			   <param name='name' value='FinalProjectUCFmsft&#47;Microsoft' />
+			   <param name='tabs' value='no' />
+			   <param name='toolbar' value='yes' />
+			   <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFmsft&#47;Microsoft&#47;1.png' />
+			   <param name='animate_transition' value='yes' />
+			   <param name='display_static_image' value='yes' />
+			   <param name='display_spinner' value='yes' />
+			   <param name='display_overlay' value='yes' />
+			   <param name='display_count' value='yes' />
+			   <param name='language' value='en-US' />
+			</object>
+		 </div>
+		 <script type='text/javascript'>                    var divElement = document.getElementById('viz1622306314753');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+		</div> <!-- End Col -->
+
+
+		<div class="col-md-6">
+
+
+        <!-- Cisco Systems -->
+		<div class='tableauPlaceholder' id='viz1622306240434' style='position: relative'>
+			<noscript><a href='#'><img alt='Cisco ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFcsco&#47;Cisco&#47;1_rss.png' style='border: none' /></a></noscript>
+			<object class='tableauViz'  style='display:none;'>
+			   <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			   <param name='embed_code_version' value='3' />
+			   <param name='site_root' value='' />
+			   <param name='name' value='FinalProjectUCFcsco&#47;Cisco' />
+			   <param name='tabs' value='no' />
+			   <param name='toolbar' value='yes' />
+			   <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFcsco&#47;Cisco&#47;1.png' />
+			   <param name='animate_transition' value='yes' />
+			   <param name='display_static_image' value='yes' />
+			   <param name='display_spinner' value='yes' />
+			   <param name='display_overlay' value='yes' />
+			   <param name='display_count' value='yes' />
+			   <param name='language' value='en-US' />
+			</object>
+		 </div>
+		 <script type='text/javascript'>                    var divElement = document.getElementById('viz1622306240434');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+	    </div> <!-- End col -->
+
+		</div> <!-- End row -->
+
+    <div class="row">
+		<div class="col-md-6">
+
+		<!-- Facebook -->
+		<div class='tableauPlaceholder' id='viz1622306132155' style='position: relative'>
+			<noscript><a href='#'><img alt='Facebook ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFfb&#47;Facebook&#47;1_rss.png' style='border: none' /></a></noscript>
+			<object class='tableauViz'  style='display:none;'>
+			   <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			   <param name='embed_code_version' value='3' />
+			   <param name='site_root' value='' />
+			   <param name='name' value='FinalProjectUCFfb&#47;Facebook' />
+			   <param name='tabs' value='no' />
+			   <param name='toolbar' value='yes' />
+			   <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFfb&#47;Facebook&#47;1.png' />
+			   <param name='animate_transition' value='yes' />
+			   <param name='display_static_image' value='yes' />
+			   <param name='display_spinner' value='yes' />
+			   <param name='display_overlay' value='yes' />
+			   <param name='display_count' value='yes' />
+			   <param name='language' value='en-US' />
+			</object>
+		 </div>
+		 <script type='text/javascript'>                    var divElement = document.getElementById('viz1622306132155');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+		 </div> <!-- End col -->
+
+		 <div class="col-md-6">
+
+		<!-- FinalProjectUCFtsla -->
+		<div class='tableauPlaceholder' id='viz1622303076668' style='position: relative'>
+			<noscript><a href='#'><img alt='Tesla ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFtsla&#47;Tesla&#47;1_rss.png' style='border: none' /></a></noscript>
+			<object class='tableauViz'  style='display:none;'>
+			   <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			   <param name='embed_code_version' value='3' />
+			   <param name='site_root' value='' />
+			   <param name='name' value='FinalProjectUCFtsla&#47;Tesla' />
+			   <param name='tabs' value='no' />
+			   <param name='toolbar' value='yes' />
+			   <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFtsla&#47;Tesla&#47;1.png' />
+			   <param name='animate_transition' value='yes' />
+			   <param name='display_static_image' value='yes' />
+			   <param name='display_spinner' value='yes' />
+			   <param name='display_overlay' value='yes' />
+			   <param name='display_count' value='yes' />
+			   <param name='language' value='en-US' />
+			</object>
+		 </div>
+		 <script type='text/javascript'>                    var divElement = document.getElementById('viz1622303076668');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+		
+
+		 </div> <!-- End Col -->
+		 </div> <!-- End row -->
+
+		 <div class="row">
+			<div class="col-md-6">
+
+         <!-- Starbucks -->
+		 <div class='tableauPlaceholder' id='viz1622303554525' style='position: relative'>
+			<noscript><a href='#'><img alt='Starbucks ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCF_16222439454050&#47;Starbucks&#47;1_rss.png' style='border: none' /></a></noscript>
+			<object class='tableauViz'  style='display:none;'>
+			   <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			   <param name='embed_code_version' value='3' />
+			   <param name='site_root' value='' />
+			   <param name='name' value='FinalProjectUCF_16222439454050&#47;Starbucks' />
+			   <param name='tabs' value='no' />
+			   <param name='toolbar' value='yes' />
+			   <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCF_16222439454050&#47;Starbucks&#47;1.png' />
+			   <param name='animate_transition' value='yes' />
+			   <param name='display_static_image' value='yes' />
+			   <param name='display_spinner' value='yes' />
+			   <param name='display_overlay' value='yes' />
+			   <param name='display_count' value='yes' />
+			   <param name='language' value='en-US' />
+			</object>
+		 </div>
+		 <script type='text/javascript'>                    var divElement = document.getElementById('viz1622303554525');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+		 
+
+		 </div> <!-- End col -->
+
+		 <div class="col-md-6">
+
+		 <!-- Amazon -->
+         <div class='tableauPlaceholder' id='viz1622305523216' style='position: relative'>
+			<noscript><a href='#'><img alt='Amazon ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFamz&#47;Amazon&#47;1_rss.png' style='border: none' /></a></noscript>
+			<object class='tableauViz'  style='display:none;'>
+			   <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+			   <param name='embed_code_version' value='3' />
+			   <param name='site_root' value='' />
+			   <param name='name' value='FinalProjectUCFamz&#47;Amazon' />
+			   <param name='tabs' value='no' />
+			   <param name='toolbar' value='yes' />
+			   <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProjectUCFamz&#47;Amazon&#47;1.png' />
+			   <param name='animate_transition' value='yes' />
+			   <param name='display_static_image' value='yes' />
+			   <param name='display_spinner' value='yes' />
+			   <param name='display_overlay' value='yes' />
+			   <param name='display_count' value='yes' />
+			   <param name='language' value='en-US' />
+			</object>
+		 </div>
+		 <script type='text/javascript'>                    var divElement = document.getElementById('viz1622305523216');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+	
+
+		 </div> <!-- End col -->
+		 </div> <!-- End row -->
+		 
+		 <a href="#">Back to top of page</a>
+		<hr>
+
+		<h2 id="conclusion" class="mb-4">Conclusion</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#">Back to top of page</a>
+		<hr>
+
+		<h2 id="see_also" class="mb-4">See Also</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<a href="#">Back to top of page</a>
+      </div>
+	</div>
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/popper.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>
