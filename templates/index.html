@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Sidebar 02</title>
+  	<title>Group 4 - Final Project</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -205,8 +205,18 @@ csco_df = csco_df.apply( pd.to_numeric)</code>
 		<hr>
 
 		<h2 id="machine_learning" class="mb-4">Machine Learning</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>2- Machine learning.
+			we are running 2 models on our datasets.
+			The first model is Linear regression which is more of a supervised machine learning algorithm predicting the output 
+			of a continuous slope. This model was trained and tested on 2 sets of data frame, one for the 1st 4a years of data 
+			and the second is the last year of data.</p>
+			<p>The second model that we ran was a sequential model in TensorFlow where we were dealing with stacks of layers each 
+			with one input and one output tensor.</p>
+			<p>The last model we used was an ARIMA model, where we fit the model the the stock price data for Microsoft, and 
+				computed a prediction of the stock price on 20% of the data.
+			</p>
+		</p>
+        
         
 		<div class="row">
 			<div class="col">
@@ -295,8 +305,6 @@ csco_df = csco_df.apply( pd.to_numeric)</code>
 
 		<div class="row">
 			<div class="col">
-		<a href="#">Back to Top</a>
-		<br>
 		<h3 id="ARIMA">ARIMA Time Series Analysis</h3>
 		<p>
 			ARIMA is the acronym for <b>autoregressive integrated moving average</b>.  It is a generalization of the 
@@ -315,6 +323,12 @@ csco_df = csco_df.apply( pd.to_numeric)</code>
 				<li> The <b>MA</b> part indicates that the regresion error is a linear combination of error terms .
 				</li>
 			</ul>
+		</p>
+		<p>
+			The ARIMA model is characterized by 3 terms (p,d,q): 
+			<b>p</b> is the order of the AR term (the number of autoregressive terms).
+			<b>i</b> is the number of times differencing is needed to achieve stationarity.
+			<b>q</b> is the order of the MA term (the number of lagged forecast errors in the prediction equation).
 		</p>
 		<div class="embed-responsive embed-responsive-16by9">
 			<iframe class="embed-responsive-item" src="/ml/ARIMA" allowfullscreen></iframe>
