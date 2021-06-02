@@ -172,7 +172,6 @@
 			<a href="https://www.nasdaq.com/market-activity/stocks/csco/historical">CSCO Historical Data</a>
 		</p>
         
-        <a href="#">Back to top of page</a>
 		<hr>
 
 		<h2 id="data_cleaning" class="mb-4">Data Cleaning</h2>
@@ -513,8 +512,29 @@ csco_df = csco_df.apply( pd.to_numeric)</code>
 		<hr>
 
 		<h2 id="conclusion" class="mb-4">Conclusion</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>In our final project, we built machine learning models to analyze, demonstrate, and predict the future stock prices.
+			<br>
+We first imported our data in a csv format from Nasdaq.com.  For this project we chose: AMZN, SBUX, CSCO, TSLA and MSFT. <br>
+After the initial cleaning and analysis of our data, we ran 3 ML models on the datasets:
+<ul>
+	<li>Linear Regression to calculate variables.</li>
+	<li>TensorFlow to make useful models and algorithms.</li>
+	<li>Finally, but not least important, we have also explored the ARIMA model for time series data and concluded 
+		that it is not suitable for long term prediction of stock prices; there are many factors in play that affect the 
+		price of a stock given its chaotic nature, and the time-series models cannot generate good predictors for the long term. 
+		But the ARIMA model, and time-series models in general are useful tools for analyzing behavior and finding trends in 
+	    the data. </li>
+</ul>
+
+Many tools were implemented in this analysis. We used pandas for data cleaning, HTML, CSS, Tableau visualizations. 
+<br>
+Lastly, we deployed on a Heroku a static site that ran and presented our models. 
+<br>In conclusion, by evaluating past and current data from these companies, demonstrated on the app to gain an edge in the markets by making an informed decision through technical analysis.
+
+<br>
+<br>
+P.S. PLEASE NOTE THAT THE FINDINGS ON THIS MODEL DO NOT GUARANTEE ACURATE REALTIME FUTURE STOCK PRICES, AND THIS MODEL SHOULD BE EXPLORED FOR DEMONSTRATION/EDUCATION PURPOSES.
+        </p>
         <a href="#">Back to top of page</a>
 		<hr>
 
