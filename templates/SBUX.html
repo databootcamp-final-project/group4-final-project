@@ -14272,6 +14272,21 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="STOCK-ANALYSIS">STOCK ANALYSIS<a class="anchor-link" href="#STOCK-ANALYSIS">&#182;</a></h3><p>This Stock analysis is examination of a specific index from the Stock market. this is more of a technical analysis than a fundamental one. it's being based on the history of a stock price, and predict future movement.</p>
+<p>we will be doing the following:</p>
+<ol>
+<li>Import Librarier and Dependencies</li>
+<li>Import Stock Data</li>
+<li>Clean Data</li>
+<li>plot existing data (analysis)</li>
+<li>build ML to train and test Data (Linear Regression)</li>
+<li>present our predicted Findings</li>
+</ol>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="DEPENDENCIES">DEPENDENCIES<a class="anchor-link" href="#DEPENDENCIES">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14565,7 +14580,13 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="CREATE-ADDITIONAL-DATA">CREATE ADDITIONAL DATA<a class="anchor-link" href="#CREATE-ADDITIONAL-DATA">&#182;</a></h3>
+<h3 id="DATA-MANIPULATION">DATA MANIPULATION<a class="anchor-link" href="#DATA-MANIPULATION">&#182;</a></h3><p>By understanding the Data and creating new data to be consumed by our models such as below</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="CREATE-ADDITIONAL-DATA">CREATE ADDITIONAL DATA<a class="anchor-link" href="#CREATE-ADDITIONAL-DATA">&#182;</a></h4>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15178,6 +15199,11 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="DEFINING-THE-X-&amp;-Y">DEFINING THE X &amp; Y<a class="anchor-link" href="#DEFINING-THE-X-&amp;-Y">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15244,6 +15270,11 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRINTING-OUR-LR-AND-COEF-COUNT">PRINTING OUR LR AND COEF COUNT<a class="anchor-link" href="#PRINTING-OUR-LR-AND-COEF-COUNT">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15281,6 +15312,11 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="SCORING">SCORING<a class="anchor-link" href="#SCORING">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15317,6 +15353,11 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRICE-PREDICTION">PRICE PREDICTION<a class="anchor-link" href="#PRICE-PREDICTION">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15361,6 +15402,11 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="DAILY-RETURN">DAILY RETURN<a class="anchor-link" href="#DAILY-RETURN">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15405,6 +15451,11 @@ Name: Close/Last, dtype: float64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="PLOT-LR-PREDICTION-OF-1ST-DF">PLOT LR PREDICTION OF 1ST DF<a class="anchor-link" href="#PLOT-LR-PREDICTION-OF-1ST-DF">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15507,6 +15558,11 @@ Name: Close/Last, dtype: float64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="DEFINING-THE-X-&amp;-Y">DEFINING THE X &amp; Y<a class="anchor-link" href="#DEFINING-THE-X-&amp;-Y">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15559,6 +15615,11 @@ Name: Close/Last, dtype: float64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRINTING-OUR-LR-AND-COEF-COUNT">PRINTING OUR LR AND COEF COUNT<a class="anchor-link" href="#PRINTING-OUR-LR-AND-COEF-COUNT">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15596,6 +15657,11 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="SCORING">SCORING<a class="anchor-link" href="#SCORING">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15631,6 +15697,11 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRICE-PREDICTION">PRICE PREDICTION<a class="anchor-link" href="#PRICE-PREDICTION">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15919,6 +15990,11 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="PLOT-LR-PREDICTION-OF-2ND-DF">PLOT LR PREDICTION OF 2ND DF<a class="anchor-link" href="#PLOT-LR-PREDICTION-OF-2ND-DF">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -15988,9 +16064,14 @@ coefficient count: 1
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <tr>
-    <td> <img src="images/sbux_4y.jpg"style="width: 550px;"/> </td>
-    <td> <img src="images/sbux_ls.jpg"style="width: 550px;"/> </td>
+    <td> <img src="images/amzn_4y.jpg"style="width: 550px;"/> </td>
+    <td> <img src="images/amzn_ls.jpg"style="width: 550px;"/> </td>
 </tr>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="SHAPING-OUR-DF-FOR-TF-SEQUENTIAL-MODEL">SHAPING OUR DF FOR TF SEQUENTIAL MODEL<a class="anchor-link" href="#SHAPING-OUR-DF-FOR-TF-SEQUENTIAL-MODEL">&#182;</a></h4>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -16029,6 +16110,11 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="BUILDING-OUR-MODEL">BUILDING OUR MODEL<a class="anchor-link" href="#BUILDING-OUR-MODEL">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -16044,6 +16130,11 @@ coefficient count: 1
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="IDENTIFY-X-&amp;-Y">IDENTIFY X &amp; Y<a class="anchor-link" href="#IDENTIFY-X-&amp;-Y">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -16059,6 +16150,11 @@ coefficient count: 1
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="RUN-&amp;-FIT-MODEL">RUN &amp; FIT MODEL<a class="anchor-link" href="#RUN-&amp;-FIT-MODEL">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -16086,205 +16182,205 @@ coefficient count: 1
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Epoch 1/100
-40/40 [==============================] - 0s 846us/step - loss: 2887.5591
+40/40 [==============================] - 0s 1ms/step - loss: 2893.2891
 Epoch 2/100
-40/40 [==============================] - 0s 872us/step - loss: 818.3184
+40/40 [==============================] - 0s 1ms/step - loss: 822.2559
 Epoch 3/100
-40/40 [==============================] - 0s 872us/step - loss: 409.6368
+40/40 [==============================] - 0s 949us/step - loss: 407.4162
 Epoch 4/100
-40/40 [==============================] - 0s 949us/step - loss: 325.7896
+40/40 [==============================] - 0s 898us/step - loss: 327.9867
 Epoch 5/100
-40/40 [==============================] - 0s 821us/step - loss: 311.4669
+40/40 [==============================] - 0s 897us/step - loss: 311.5390
 Epoch 6/100
-40/40 [==============================] - 0s 872us/step - loss: 308.2054
+40/40 [==============================] - 0s 949us/step - loss: 308.3716
 Epoch 7/100
-40/40 [==============================] - 0s 821us/step - loss: 307.5822
+40/40 [==============================] - 0s 1ms/step - loss: 307.6091
 Epoch 8/100
-40/40 [==============================] - 0s 974us/step - loss: 307.4904
+40/40 [==============================] - 0s 949us/step - loss: 307.4094
 Epoch 9/100
-40/40 [==============================] - 0s 846us/step - loss: 307.3990
+40/40 [==============================] - 0s 923us/step - loss: 307.4202
 Epoch 10/100
-40/40 [==============================] - 0s 821us/step - loss: 307.3977
+40/40 [==============================] - 0s 949us/step - loss: 307.4748
 Epoch 11/100
-40/40 [==============================] - 0s 821us/step - loss: 307.4671
+40/40 [==============================] - 0s 821us/step - loss: 307.4251
 Epoch 12/100
-40/40 [==============================] - 0s 1ms/step - loss: 307.4554
+40/40 [==============================] - 0s 1ms/step - loss: 307.4629
 Epoch 13/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4613
+40/40 [==============================] - 0s 923us/step - loss: 307.4510
 Epoch 14/100
-40/40 [==============================] - 0s 1ms/step - loss: 307.4049
+40/40 [==============================] - 0s 1ms/step - loss: 307.4739
 Epoch 15/100
-40/40 [==============================] - 0s 744us/step - loss: 307.3885
+40/40 [==============================] - 0s 923us/step - loss: 307.4271
 Epoch 16/100
-40/40 [==============================] - 0s 846us/step - loss: 307.5182
+40/40 [==============================] - 0s 872us/step - loss: 307.4125
 Epoch 17/100
-40/40 [==============================] - 0s 795us/step - loss: 307.4077
+40/40 [==============================] - 0s 821us/step - loss: 307.4608
 Epoch 18/100
-40/40 [==============================] - 0s 949us/step - loss: 307.4200
+40/40 [==============================] - 0s 872us/step - loss: 307.4361
 Epoch 19/100
-40/40 [==============================] - 0s 897us/step - loss: 307.4102
+40/40 [==============================] - 0s 923us/step - loss: 307.3848
 Epoch 20/100
-40/40 [==============================] - 0s 846us/step - loss: 307.3946
+40/40 [==============================] - 0s 872us/step - loss: 307.4932
 Epoch 21/100
-40/40 [==============================] - 0s 821us/step - loss: 307.4651
+40/40 [==============================] - 0s 897us/step - loss: 307.4149
 Epoch 22/100
-40/40 [==============================] - 0s 923us/step - loss: 307.4533
+40/40 [==============================] - 0s 897us/step - loss: 307.4101
 Epoch 23/100
-40/40 [==============================] - 0s 872us/step - loss: 307.4885
+40/40 [==============================] - 0s 872us/step - loss: 307.4533
 Epoch 24/100
-40/40 [==============================] - 0s 744us/step - loss: 307.5008
+40/40 [==============================] - 0s 1ms/step - loss: 307.4763
 Epoch 25/100
-40/40 [==============================] - 0s 846us/step - loss: 307.5901
+40/40 [==============================] - 0s 821us/step - loss: 307.4613
 Epoch 26/100
-40/40 [==============================] - 0s 795us/step - loss: 307.4429
+40/40 [==============================] - 0s 898us/step - loss: 307.4029
 Epoch 27/100
-40/40 [==============================] - 0s 821us/step - loss: 307.4383
+40/40 [==============================] - 0s 897us/step - loss: 307.4953
 Epoch 28/100
-40/40 [==============================] - 0s 795us/step - loss: 307.5635
+40/40 [==============================] - 0s 923us/step - loss: 307.4644
 Epoch 29/100
-40/40 [==============================] - 0s 795us/step - loss: 307.4629
+40/40 [==============================] - 0s 872us/step - loss: 307.4979
 Epoch 30/100
-40/40 [==============================] - 0s 795us/step - loss: 307.4482
+40/40 [==============================] - 0s 923us/step - loss: 307.3959
 Epoch 31/100
-40/40 [==============================] - 0s 897us/step - loss: 307.4041
+40/40 [==============================] - 0s 872us/step - loss: 307.4755
 Epoch 32/100
-40/40 [==============================] - 0s 846us/step - loss: 307.4185
+40/40 [==============================] - 0s 974us/step - loss: 307.4345
 Epoch 33/100
-40/40 [==============================] - 0s 769us/step - loss: 307.5285
+40/40 [==============================] - 0s 872us/step - loss: 307.3221
 Epoch 34/100
-40/40 [==============================] - 0s 769us/step - loss: 307.5059
+40/40 [==============================] - 0s 872us/step - loss: 307.4844
 Epoch 35/100
-40/40 [==============================] - 0s 949us/step - loss: 307.4026
+40/40 [==============================] - 0s 974us/step - loss: 307.4568
 Epoch 36/100
-40/40 [==============================] - 0s 1ms/step - loss: 307.5082
+40/40 [==============================] - 0s 1ms/step - loss: 307.3719
 Epoch 37/100
-40/40 [==============================] - 0s 2ms/step - loss: 307.4475
+40/40 [==============================] - 0s 897us/step - loss: 307.4619
 Epoch 38/100
-40/40 [==============================] - 0s 872us/step - loss: 307.4236
+40/40 [==============================] - 0s 846us/step - loss: 307.3964
 Epoch 39/100
-40/40 [==============================] - 0s 949us/step - loss: 307.4171
+40/40 [==============================] - 0s 846us/step - loss: 307.4431
 Epoch 40/100
-40/40 [==============================] - 0s 795us/step - loss: 307.4839
+40/40 [==============================] - 0s 821us/step - loss: 307.4401
 Epoch 41/100
-40/40 [==============================] - 0s 872us/step - loss: 307.4276
+40/40 [==============================] - 0s 1ms/step - loss: 307.3744
 Epoch 42/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4393
+40/40 [==============================] - 0s 923us/step - loss: 307.3813
 Epoch 43/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4768
+40/40 [==============================] - 0s 1ms/step - loss: 307.3878
 Epoch 44/100
-40/40 [==============================] - 0s 846us/step - loss: 307.5156
+40/40 [==============================] - 0s 1ms/step - loss: 307.4443
 Epoch 45/100
-40/40 [==============================] - 0s 1ms/step - loss: 307.4246
+40/40 [==============================] - 0s 923us/step - loss: 307.4274
 Epoch 46/100
-40/40 [==============================] - 0s 795us/step - loss: 307.4565
+40/40 [==============================] - 0s 923us/step - loss: 307.4171
 Epoch 47/100
-40/40 [==============================] - 0s 718us/step - loss: 307.4993
+40/40 [==============================] - 0s 821us/step - loss: 307.4286
 Epoch 48/100
-40/40 [==============================] - 0s 718us/step - loss: 307.5155
+40/40 [==============================] - 0s 872us/step - loss: 307.4532
 Epoch 49/100
-40/40 [==============================] - 0s 744us/step - loss: 307.3932
+40/40 [==============================] - 0s 923us/step - loss: 307.3206
 Epoch 50/100
-40/40 [==============================] - 0s 641us/step - loss: 307.4497
+40/40 [==============================] - 0s 821us/step - loss: 307.4599
 Epoch 51/100
-40/40 [==============================] - 0s 718us/step - loss: 307.4378
+40/40 [==============================] - 0s 923us/step - loss: 307.4276
 Epoch 52/100
-40/40 [==============================] - 0s 718us/step - loss: 307.4165
+40/40 [==============================] - 0s 1ms/step - loss: 307.3715
 Epoch 53/100
-40/40 [==============================] - 0s 821us/step - loss: 307.4238
+40/40 [==============================] - 0s 1ms/step - loss: 307.4518
 Epoch 54/100
-40/40 [==============================] - 0s 718us/step - loss: 307.4322
+40/40 [==============================] - 0s 1ms/step - loss: 307.4636
 Epoch 55/100
-40/40 [==============================] - 0s 667us/step - loss: 307.4446
+40/40 [==============================] - 0s 923us/step - loss: 307.5182
 Epoch 56/100
-40/40 [==============================] - 0s 692us/step - loss: 307.3969
+40/40 [==============================] - 0s 949us/step - loss: 307.4122
 Epoch 57/100
-40/40 [==============================] - 0s 718us/step - loss: 307.5555
+40/40 [==============================] - 0s 974us/step - loss: 307.4302
 Epoch 58/100
-40/40 [==============================] - 0s 1ms/step - loss: 307.4704
+40/40 [==============================] - 0s 744us/step - loss: 307.4031
 Epoch 59/100
-40/40 [==============================] - 0s 692us/step - loss: 307.3589
+40/40 [==============================] - 0s 795us/step - loss: 307.4542
 Epoch 60/100
-40/40 [==============================] - 0s 667us/step - loss: 307.4439
+40/40 [==============================] - 0s 872us/step - loss: 307.4125
 Epoch 61/100
-40/40 [==============================] - 0s 743us/step - loss: 307.4315
+40/40 [==============================] - 0s 872us/step - loss: 307.4630
 Epoch 62/100
-40/40 [==============================] - 0s 744us/step - loss: 307.4318
+40/40 [==============================] - 0s 923us/step - loss: 307.4130
 Epoch 63/100
-40/40 [==============================] - 0s 692us/step - loss: 307.3578
+40/40 [==============================] - ETA: 0s - loss: 366.500 - 0s 872us/step - loss: 307.4294
 Epoch 64/100
-40/40 [==============================] - 0s 718us/step - loss: 307.4009
+40/40 [==============================] - 0s 795us/step - loss: 307.4971
 Epoch 65/100
-40/40 [==============================] - 0s 692us/step - loss: 307.4180
+40/40 [==============================] - 0s 872us/step - loss: 307.3910
 Epoch 66/100
-40/40 [==============================] - 0s 667us/step - loss: 307.4597
+40/40 [==============================] - 0s 897us/step - loss: 307.4041
 Epoch 67/100
-40/40 [==============================] - 0s 667us/step - loss: 307.4184
+40/40 [==============================] - 0s 846us/step - loss: 307.4657
 Epoch 68/100
-40/40 [==============================] - 0s 667us/step - loss: 307.4918
+40/40 [==============================] - 0s 846us/step - loss: 307.4258
 Epoch 69/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4651
+40/40 [==============================] - 0s 846us/step - loss: 307.4799
 Epoch 70/100
-40/40 [==============================] - 0s 795us/step - loss: 307.4330
+40/40 [==============================] - 0s 846us/step - loss: 307.4403
 Epoch 71/100
-40/40 [==============================] - 0s 667us/step - loss: 307.4694
+40/40 [==============================] - 0s 821us/step - loss: 307.4712
 Epoch 72/100
-40/40 [==============================] - 0s 718us/step - loss: 307.3972
+40/40 [==============================] - 0s 821us/step - loss: 307.4799
 Epoch 73/100
-40/40 [==============================] - 0s 667us/step - loss: 307.5050
+40/40 [==============================] - 0s 821us/step - loss: 307.4611
 Epoch 74/100
-40/40 [==============================] - 0s 718us/step - loss: 307.5112
+40/40 [==============================] - 0s 820us/step - loss: 307.4225
 Epoch 75/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4264
+40/40 [==============================] - 0s 898us/step - loss: 307.4438
 Epoch 76/100
-40/40 [==============================] - 0s 744us/step - loss: 307.4267
+40/40 [==============================] - 0s 872us/step - loss: 307.4312
 Epoch 77/100
-40/40 [==============================] - 0s 692us/step - loss: 307.4486
+40/40 [==============================] - 0s 846us/step - loss: 307.4156
 Epoch 78/100
-40/40 [==============================] - 0s 692us/step - loss: 307.4132
+40/40 [==============================] - 0s 1ms/step - loss: 307.4549
 Epoch 79/100
-40/40 [==============================] - 0s 641us/step - loss: 307.4880
+40/40 [==============================] - 0s 949us/step - loss: 307.3684
 Epoch 80/100
-40/40 [==============================] - 0s 744us/step - loss: 307.5747
+40/40 [==============================] - 0s 949us/step - loss: 307.3712
 Epoch 81/100
-40/40 [==============================] - 0s 692us/step - loss: 307.4572
+40/40 [==============================] - 0s 846us/step - loss: 307.4678
 Epoch 82/100
-40/40 [==============================] - 0s 821us/step - loss: 307.4174
+40/40 [==============================] - 0s 1ms/step - loss: 307.4434
 Epoch 83/100
-40/40 [==============================] - 0s 769us/step - loss: 307.3915
+40/40 [==============================] - 0s 949us/step - loss: 307.4924
 Epoch 84/100
-40/40 [==============================] - 0s 820us/step - loss: 307.4504
+40/40 [==============================] - 0s 821us/step - loss: 307.4117
 Epoch 85/100
-40/40 [==============================] - 0s 949us/step - loss: 307.4258
+40/40 [==============================] - 0s 897us/step - loss: 307.4237
 Epoch 86/100
-40/40 [==============================] - 0s 769us/step - loss: 307.5428
+40/40 [==============================] - 0s 974us/step - loss: 307.4469
 Epoch 87/100
-40/40 [==============================] - 0s 795us/step - loss: 307.3805
+40/40 [==============================] - 0s 846us/step - loss: 307.4499
 Epoch 88/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4796
+40/40 [==============================] - 0s 795us/step - loss: 307.3575
 Epoch 89/100
-40/40 [==============================] - 0s 821us/step - loss: 307.4876
+40/40 [==============================] - 0s 795us/step - loss: 307.5999
 Epoch 90/100
-40/40 [==============================] - 0s 744us/step - loss: 307.5251
+40/40 [==============================] - 0s 897us/step - loss: 307.4364
 Epoch 91/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4485
+40/40 [==============================] - 0s 897us/step - loss: 307.3802
 Epoch 92/100
-40/40 [==============================] - 0s 744us/step - loss: 307.4294
+40/40 [==============================] - 0s 872us/step - loss: 307.4057
 Epoch 93/100
-40/40 [==============================] - 0s 744us/step - loss: 307.4378
+40/40 [==============================] - 0s 769us/step - loss: 307.4503
 Epoch 94/100
-40/40 [==============================] - 0s 744us/step - loss: 307.4543
+40/40 [==============================] - 0s 872us/step - loss: 307.4417
 Epoch 95/100
-40/40 [==============================] - 0s 769us/step - loss: 307.4556
+40/40 [==============================] - 0s 872us/step - loss: 307.5050
 Epoch 96/100
-40/40 [==============================] - 0s 692us/step - loss: 307.3883
+40/40 [==============================] - 0s 821us/step - loss: 307.4674
 Epoch 97/100
-40/40 [==============================] - 0s 718us/step - loss: 307.5531
+40/40 [==============================] - 0s 821us/step - loss: 307.3995
 Epoch 98/100
-40/40 [==============================] - 0s 744us/step - loss: 307.4564
+40/40 [==============================] - 0s 872us/step - loss: 307.4389
 Epoch 99/100
-40/40 [==============================] - 0s 692us/step - loss: 307.4410
+40/40 [==============================] - 0s 872us/step - loss: 307.5360
 Epoch 100/100
-40/40 [==============================] - 0s 744us/step - loss: 307.4267
+40/40 [==============================] - 0s 846us/step - loss: 307.4606
 </pre>
 </div>
 </div>
@@ -16298,7 +16394,7 @@ Epoch 100/100
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;tensorflow.python.keras.callbacks.History at 0x11a6fc8e6a0&gt;</pre>
+<pre>&lt;tensorflow.python.keras.callbacks.History at 0x213e95a4c40&gt;</pre>
 </div>
 
 </div>
@@ -16307,6 +16403,11 @@ Epoch 100/100
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="TRANSFORM-SCALE-AND-FIT-MODEL">TRANSFORM SCALE AND FIT MODEL<a class="anchor-link" href="#TRANSFORM-SCALE-AND-FIT-MODEL">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -16351,6 +16452,11 @@ Epoch 100/100
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRINT-OUR-PREDICTION">PRINT OUR PREDICTION<a class="anchor-link" href="#PRINT-OUR-PREDICTION">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -16377,7 +16483,7 @@ Epoch 100/100
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[70.91989]]
+<pre>[[71.12723]]
 </pre>
 </div>
 </div>

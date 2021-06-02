@@ -14272,12 +14272,27 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="STOCK-ANALYSIS">STOCK ANALYSIS<a class="anchor-link" href="#STOCK-ANALYSIS">&#182;</a></h3><p>This Stock analysis is examination of a specific index from the Stock market. this is more of a technical analysis than a fundamental one. it's being based on the history of a stock price, and predict future movement.</p>
+<p>we will be doing the following:</p>
+<ol>
+<li>Import Librarier and Dependencies</li>
+<li>Import Stock Data</li>
+<li>Clean Data</li>
+<li>plot existing data (analysis)</li>
+<li>build ML to train and test Data (Linear Regression)</li>
+<li>present our predicted Findings</li>
+</ol>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="DEPENDENCIES">DEPENDENCIES<a class="anchor-link" href="#DEPENDENCIES">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#dependencies</span>
@@ -14565,7 +14580,13 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="CREATE-ADDITIONAL-DATA">CREATE ADDITIONAL DATA<a class="anchor-link" href="#CREATE-ADDITIONAL-DATA">&#182;</a></h3>
+<h3 id="DATA-MANIPULATION">DATA MANIPULATION<a class="anchor-link" href="#DATA-MANIPULATION">&#182;</a></h3><p>By understanding the Data and creating new data to be consumed by our models such as below</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="CREATE-ADDITIONAL-DATA">CREATE ADDITIONAL DATA<a class="anchor-link" href="#CREATE-ADDITIONAL-DATA">&#182;</a></h4>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14728,7 +14749,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#setup datetime for first 4 years</span>
@@ -14755,7 +14776,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -14887,7 +14908,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#setup datetime for last year</span>
@@ -14914,7 +14935,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -15095,7 +15116,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -15178,10 +15199,15 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="DEFINING-THE-X-&amp;-Y">DEFINING THE X &amp; Y<a class="anchor-link" href="#DEFINING-THE-X-&amp;-Y">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">amzn_df_4</span><span class="p">[</span><span class="s1">&#39;Open&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1006</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -15196,7 +15222,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
@@ -15210,7 +15236,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
@@ -15229,7 +15255,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15244,10 +15270,15 @@ a.anchor-link {
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRINTING-OUR-LR-AND-COEF-COUNT">PRINTING OUR LR AND COEF COUNT<a class="anchor-link" href="#PRINTING-OUR-LR-AND-COEF-COUNT">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Linear Regression intercept:&#39;</span><span class="p">,</span> <span class="n">lr</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
@@ -15281,10 +15312,15 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="SCORING">SCORING<a class="anchor-link" href="#SCORING">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
@@ -15317,10 +15353,15 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRICE-PREDICTION">PRICE PREDICTION<a class="anchor-link" href="#PRICE-PREDICTION">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicting the price</span>
@@ -15340,7 +15381,7 @@ coefficient count: 1
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -15361,10 +15402,15 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="DAILY-RETURN">DAILY RETURN<a class="anchor-link" href="#DAILY-RETURN">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#daily Return</span>
@@ -15385,7 +15431,7 @@ coefficient count: 1
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -15405,10 +15451,15 @@ Name: Close/Last, dtype: float64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="PLOT-LR-PREDICTION-OF-1ST-DF">PLOT LR PREDICTION OF 1ST DF<a class="anchor-link" href="#PLOT-LR-PREDICTION-OF-1ST-DF">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -15434,7 +15485,7 @@ Name: Close/Last, dtype: float64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
 
@@ -15473,7 +15524,7 @@ Name: Close/Last, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">amzn_df_ls</span><span class="o">.</span><span class="n">shape</span>
@@ -15492,7 +15543,7 @@ Name: Close/Last, dtype: float64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
 
@@ -15507,10 +15558,15 @@ Name: Close/Last, dtype: float64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="DEFINING-THE-X-&amp;-Y">DEFINING THE X &amp; Y<a class="anchor-link" href="#DEFINING-THE-X-&amp;-Y">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_ls</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">amzn_df_ls</span><span class="p">[</span><span class="s1">&#39;Open&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">251</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -15525,7 +15581,7 @@ Name: Close/Last, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_ls</span><span class="p">,</span> <span class="n">Y_ls</span><span class="p">)</span>
@@ -15544,7 +15600,7 @@ Name: Close/Last, dtype: float64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
 
 
@@ -15559,10 +15615,15 @@ Name: Close/Last, dtype: float64</pre>
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRINTING-OUR-LR-AND-COEF-COUNT">PRINTING OUR LR AND COEF COUNT<a class="anchor-link" href="#PRINTING-OUR-LR-AND-COEF-COUNT">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Linear Regression intercept:&#39;</span><span class="p">,</span> <span class="n">lr</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
@@ -15596,10 +15657,15 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="SCORING">SCORING<a class="anchor-link" href="#SCORING">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy:&#39;</span><span class="p">,</span> <span class="n">lr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_ls</span><span class="p">,</span> <span class="n">Y_ls</span><span class="p">))</span>
@@ -15631,10 +15697,15 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRICE-PREDICTION">PRICE PREDICTION<a class="anchor-link" href="#PRICE-PREDICTION">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicting the price</span>
@@ -15654,7 +15725,7 @@ coefficient count: 1
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 
 
 
@@ -15919,10 +15990,15 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="PLOT-LR-PREDICTION-OF-2ND-DF">PLOT LR PREDICTION OF 2ND DF<a class="anchor-link" href="#PLOT-LR-PREDICTION-OF-2ND-DF">&#182;</a></h3>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -15948,7 +16024,7 @@ coefficient count: 1
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 
 
 
@@ -15992,10 +16068,15 @@ coefficient count: 1
     <td> <img src="images/amzn_ls.jpg"style="width: 550px;"/> </td>
 </tr>
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="SHAPING-OUR-DF-FOR-TF-SEQUENTIAL-MODEL">SHAPING OUR DF FOR TF SEQUENTIAL MODEL<a class="anchor-link" href="#SHAPING-OUR-DF-FOR-TF-SEQUENTIAL-MODEL">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">amzn_df</span><span class="o">.</span><span class="n">shape</span>
@@ -16014,7 +16095,7 @@ coefficient count: 1
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
 
 
@@ -16029,10 +16110,15 @@ coefficient count: 1
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="BUILDING-OUR-MODEL">BUILDING OUR MODEL<a class="anchor-link" href="#BUILDING-OUR-MODEL">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])])</span>
@@ -16044,10 +16130,15 @@ coefficient count: 1
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="IDENTIFY-X-&amp;-Y">IDENTIFY X &amp; Y<a class="anchor-link" href="#IDENTIFY-X-&amp;-Y">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Xc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">amzn_df</span><span class="p">[</span><span class="s1">&#39;Returns&#39;</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">float</span><span class="p">)</span> <span class="c1"># Feature</span>
@@ -16059,10 +16150,15 @@ coefficient count: 1
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="RUN-&amp;-FIT-MODEL">RUN &amp; FIT MODEL<a class="anchor-link" href="#RUN-&amp;-FIT-MODEL">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xc</span><span class="p">,</span> <span class="n">Yc</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -16086,205 +16182,205 @@ coefficient count: 1
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Epoch 1/100
-40/40 [==============================] - 0s 1ms/step - loss: 2243097.5000
+40/40 [==============================] - 0s 1ms/step - loss: 2246459.2500
 Epoch 2/100
-40/40 [==============================] - 0s 974us/step - loss: 975331.1875
+40/40 [==============================] - 0s 872us/step - loss: 976031.7500
 Epoch 3/100
-40/40 [==============================] - 0s 975us/step - loss: 722402.4375
+40/40 [==============================] - 0s 872us/step - loss: 722054.4375
 Epoch 4/100
-40/40 [==============================] - 0s 1ms/step - loss: 671050.1875
+40/40 [==============================] - 0s 872us/step - loss: 670532.1250
 Epoch 5/100
-40/40 [==============================] - 0s 1ms/step - loss: 660078.1875
+40/40 [==============================] - 0s 872us/step - loss: 660125.6875
 Epoch 6/100
-40/40 [==============================] - 0s 872us/step - loss: 658226.3750
+40/40 [==============================] - 0s 1ms/step - loss: 658322.1875
 Epoch 7/100
-40/40 [==============================] - 0s 974us/step - loss: 657923.8750
+40/40 [==============================] - 0s 897us/step - loss: 657698.8750
 Epoch 8/100
-40/40 [==============================] - 0s 1ms/step - loss: 657712.1875
+40/40 [==============================] - 0s 1ms/step - loss: 657693.1875
 Epoch 9/100
-40/40 [==============================] - 0s 2ms/step - loss: 657682.3125
+40/40 [==============================] - 0s 949us/step - loss: 657761.5000
 Epoch 10/100
-40/40 [==============================] - 0s 1ms/step - loss: 657889.8750
+40/40 [==============================] - 0s 821us/step - loss: 657765.6875
 Epoch 11/100
-40/40 [==============================] - 0s 974us/step - loss: 657816.6250
+40/40 [==============================] - 0s 846us/step - loss: 657711.5000
 Epoch 12/100
-40/40 [==============================] - 0s 1ms/step - loss: 657829.0000
+40/40 [==============================] - 0s 897us/step - loss: 657684.9375
 Epoch 13/100
-40/40 [==============================] - 0s 1ms/step - loss: 657591.6250
+40/40 [==============================] - 0s 949us/step - loss: 657761.6250
 Epoch 14/100
-40/40 [==============================] - 0s 974us/step - loss: 657770.8125
+40/40 [==============================] - 0s 872us/step - loss: 657668.6875
 Epoch 15/100
-40/40 [==============================] - 0s 1ms/step - loss: 657646.5000
+40/40 [==============================] - 0s 872us/step - loss: 657591.0000
 Epoch 16/100
-40/40 [==============================] - 0s 949us/step - loss: 657556.5625
+40/40 [==============================] - 0s 872us/step - loss: 657905.0000
 Epoch 17/100
-40/40 [==============================] - 0s 1ms/step - loss: 657707.1875
+40/40 [==============================] - 0s 872us/step - loss: 657714.3750
 Epoch 18/100
-40/40 [==============================] - 0s 1ms/step - loss: 657569.7500
+40/40 [==============================] - 0s 846us/step - loss: 657717.0625
 Epoch 19/100
-40/40 [==============================] - 0s 1ms/step - loss: 657782.8125
+40/40 [==============================] - 0s 949us/step - loss: 657612.8125
 Epoch 20/100
-40/40 [==============================] - 0s 1ms/step - loss: 657719.0625
+40/40 [==============================] - 0s 846us/step - loss: 657794.3125
 Epoch 21/100
-40/40 [==============================] - 0s 949us/step - loss: 657649.6875
+40/40 [==============================] - 0s 846us/step - loss: 657581.3750
 Epoch 22/100
-40/40 [==============================] - 0s 949us/step - loss: 657612.9375
+40/40 [==============================] - 0s 769us/step - loss: 657657.0625
 Epoch 23/100
-40/40 [==============================] - 0s 974us/step - loss: 657696.5625
+40/40 [==============================] - 0s 923us/step - loss: 657749.8125
 Epoch 24/100
-40/40 [==============================] - 0s 1ms/step - loss: 657707.3125
+40/40 [==============================] - 0s 949us/step - loss: 657659.8125
 Epoch 25/100
-40/40 [==============================] - 0s 1ms/step - loss: 657717.4375
+40/40 [==============================] - 0s 872us/step - loss: 657747.3750
 Epoch 26/100
-40/40 [==============================] - 0s 1ms/step - loss: 657858.3125
+40/40 [==============================] - 0s 1ms/step - loss: 657617.3125
 Epoch 27/100
-40/40 [==============================] - 0s 1ms/step - loss: 657594.6875
+40/40 [==============================] - 0s 846us/step - loss: 657658.8750
 Epoch 28/100
-40/40 [==============================] - 0s 1ms/step - loss: 657751.5000
+40/40 [==============================] - 0s 1ms/step - loss: 657916.5000
 Epoch 29/100
-40/40 [==============================] - 0s 1ms/step - loss: 657824.6875
+40/40 [==============================] - 0s 1ms/step - loss: 657590.6875
 Epoch 30/100
-40/40 [==============================] - 0s 1ms/step - loss: 657778.3125
+40/40 [==============================] - 0s 872us/step - loss: 657594.8125
 Epoch 31/100
-40/40 [==============================] - 0s 1ms/step - loss: 657670.5000
+40/40 [==============================] - 0s 923us/step - loss: 657701.8750
 Epoch 32/100
-40/40 [==============================] - 0s 923us/step - loss: 657910.6875
+40/40 [==============================] - 0s 923us/step - loss: 657519.4375
 Epoch 33/100
-40/40 [==============================] - 0s 949us/step - loss: 657674.2500
+40/40 [==============================] - 0s 949us/step - loss: 657575.0625
 Epoch 34/100
-40/40 [==============================] - 0s 1ms/step - loss: 657583.9375
+40/40 [==============================] - 0s 1ms/step - loss: 657720.8750
 Epoch 35/100
-40/40 [==============================] - 0s 1ms/step - loss: 657724.5000
+40/40 [==============================] - 0s 1ms/step - loss: 657800.4375
 Epoch 36/100
-40/40 [==============================] - 0s 1ms/step - loss: 657644.5625
+40/40 [==============================] - 0s 923us/step - loss: 657601.1875
 Epoch 37/100
-40/40 [==============================] - 0s 1ms/step - loss: 657697.8125
+40/40 [==============================] - 0s 949us/step - loss: 657774.1875
 Epoch 38/100
-40/40 [==============================] - 0s 949us/step - loss: 657707.6875
+40/40 [==============================] - 0s 949us/step - loss: 657768.0625
 Epoch 39/100
-40/40 [==============================] - 0s 1ms/step - loss: 657668.8125
-Epoch 40/100
-40/40 [==============================] - 0s 1ms/step - loss: 657588.8750
-Epoch 41/100
-40/40 [==============================] - 0s 1ms/step - loss: 657615.5625
-Epoch 42/100
-40/40 [==============================] - 0s 974us/step - loss: 657578.5625
-Epoch 43/100
-40/40 [==============================] - 0s 1ms/step - loss: 657710.0000
-Epoch 44/100
-40/40 [==============================] - 0s 949us/step - loss: 657665.2500
-Epoch 45/100
-40/40 [==============================] - 0s 1ms/step - loss: 657611.0625
-Epoch 46/100
-40/40 [==============================] - 0s 1ms/step - loss: 657643.6250
-Epoch 47/100
-40/40 [==============================] - 0s 1ms/step - loss: 657783.1250
-Epoch 48/100
-40/40 [==============================] - 0s 1ms/step - loss: 657794.7500
-Epoch 49/100
-40/40 [==============================] - 0s 1ms/step - loss: 657493.6250
-Epoch 50/100
-40/40 [==============================] - 0s 1ms/step - loss: 657738.0625
-Epoch 51/100
-40/40 [==============================] - 0s 1ms/step - loss: 657614.3750
-Epoch 52/100
-40/40 [==============================] - 0s 1ms/step - loss: 657581.3750
-Epoch 53/100
-40/40 [==============================] - 0s 1ms/step - loss: 657604.2500
-Epoch 54/100
-40/40 [==============================] - 0s 1ms/step - loss: 657790.6250
-Epoch 55/100
-40/40 [==============================] - 0s 1ms/step - loss: 657871.1250
-Epoch 56/100
-40/40 [==============================] - 0s 974us/step - loss: 657626.7500
-Epoch 57/100
-40/40 [==============================] - 0s 1ms/step - loss: 657640.1250
-Epoch 58/100
-40/40 [==============================] - 0s 872us/step - loss: 657666.6250
-Epoch 59/100
-40/40 [==============================] - 0s 949us/step - loss: 657760.1250
-Epoch 60/100
-40/40 [==============================] - 0s 1ms/step - loss: 657649.5625
-Epoch 61/100
-40/40 [==============================] - 0s 1ms/step - loss: 657776.5625
-Epoch 62/100
-40/40 [==============================] - 0s 1ms/step - loss: 657759.7500
-Epoch 63/100
-40/40 [==============================] - 0s 1ms/step - loss: 657617.4375
-Epoch 64/100
-40/40 [==============================] - 0s 1ms/step - loss: 657841.1875
-Epoch 65/100
-40/40 [==============================] - 0s 1ms/step - loss: 657653.9375
-Epoch 66/100
-40/40 [==============================] - 0s 949us/step - loss: 657581.4375
-Epoch 67/100
-40/40 [==============================] - 0s 1ms/step - loss: 657784.9375
-Epoch 68/100
-40/40 [==============================] - 0s 1ms/step - loss: 657586.8125
-Epoch 69/100
-40/40 [==============================] - 0s 1ms/step - loss: 657617.4375
-Epoch 70/100
-40/40 [==============================] - 0s 1ms/step - loss: 657754.7500
-Epoch 71/100
-40/40 [==============================] - 0s 1ms/step - loss: 657585.2500
-Epoch 72/100
-40/40 [==============================] - 0s 1ms/step - loss: 657524.0000
-Epoch 73/100
-40/40 [==============================] - 0s 1ms/step - loss: 657644.2500
-Epoch 74/100
-40/40 [==============================] - 0s 1ms/step - loss: 657753.9375
-Epoch 75/100
 40/40 [==============================] - 0s 1ms/step - loss: 657630.8750
+Epoch 40/100
+40/40 [==============================] - 0s 974us/step - loss: 657799.6250
+Epoch 41/100
+40/40 [==============================] - 0s 1ms/step - loss: 657505.0000
+Epoch 42/100
+40/40 [==============================] - 0s 1ms/step - loss: 657723.4375
+Epoch 43/100
+40/40 [==============================] - 0s 1ms/step - loss: 657679.3750
+Epoch 44/100
+40/40 [==============================] - 0s 1ms/step - loss: 657702.0625
+Epoch 45/100
+40/40 [==============================] - 0s 949us/step - loss: 657611.8750
+Epoch 46/100
+40/40 [==============================] - 0s 1ms/step - loss: 657510.4375
+Epoch 47/100
+40/40 [==============================] - 0s 1ms/step - loss: 657750.6875
+Epoch 48/100
+40/40 [==============================] - 0s 1ms/step - loss: 657853.7500
+Epoch 49/100
+40/40 [==============================] - 0s 1ms/step - loss: 657638.5625
+Epoch 50/100
+40/40 [==============================] - 0s 1ms/step - loss: 657698.7500
+Epoch 51/100
+40/40 [==============================] - 0s 795us/step - loss: 657684.2500
+Epoch 52/100
+40/40 [==============================] - 0s 821us/step - loss: 657618.6875
+Epoch 53/100
+40/40 [==============================] - 0s 872us/step - loss: 657744.3125
+Epoch 54/100
+40/40 [==============================] - 0s 846us/step - loss: 657768.2500
+Epoch 55/100
+40/40 [==============================] - 0s 872us/step - loss: 657748.4375
+Epoch 56/100
+40/40 [==============================] - 0s 795us/step - loss: 657608.5000
+Epoch 57/100
+40/40 [==============================] - 0s 769us/step - loss: 657722.2500
+Epoch 58/100
+40/40 [==============================] - 0s 821us/step - loss: 657623.1875
+Epoch 59/100
+40/40 [==============================] - 0s 872us/step - loss: 657789.2500
+Epoch 60/100
+40/40 [==============================] - 0s 846us/step - loss: 657568.6250
+Epoch 61/100
+40/40 [==============================] - 0s 846us/step - loss: 657803.8750
+Epoch 62/100
+40/40 [==============================] - 0s 872us/step - loss: 657830.6875
+Epoch 63/100
+40/40 [==============================] - 0s 949us/step - loss: 657783.6875
+Epoch 64/100
+40/40 [==============================] - 0s 897us/step - loss: 657680.4375
+Epoch 65/100
+40/40 [==============================] - 0s 872us/step - loss: 657724.3125
+Epoch 66/100
+40/40 [==============================] - 0s 872us/step - loss: 657636.9375
+Epoch 67/100
+40/40 [==============================] - 0s 872us/step - loss: 657677.6250
+Epoch 68/100
+40/40 [==============================] - 0s 821us/step - loss: 657581.6250
+Epoch 69/100
+40/40 [==============================] - 0s 821us/step - loss: 657747.3750
+Epoch 70/100
+40/40 [==============================] - 0s 1ms/step - loss: 657802.6250
+Epoch 71/100
+40/40 [==============================] - 0s 769us/step - loss: 657658.5625
+Epoch 72/100
+40/40 [==============================] - 0s 897us/step - loss: 657659.3125
+Epoch 73/100
+40/40 [==============================] - 0s 846us/step - loss: 657537.2500
+Epoch 74/100
+40/40 [==============================] - 0s 846us/step - loss: 657671.3750
+Epoch 75/100
+40/40 [==============================] - 0s 795us/step - loss: 657596.9375
 Epoch 76/100
-40/40 [==============================] - 0s 1ms/step - loss: 657685.2500
+40/40 [==============================] - 0s 769us/step - loss: 657645.6875
 Epoch 77/100
-40/40 [==============================] - 0s 1ms/step - loss: 657630.7500
+40/40 [==============================] - 0s 821us/step - loss: 657725.0625
 Epoch 78/100
-40/40 [==============================] - 0s 1ms/step - loss: 657689.0000
+40/40 [==============================] - 0s 821us/step - loss: 657577.7500
 Epoch 79/100
-40/40 [==============================] - 0s 1ms/step - loss: 657633.8750
+40/40 [==============================] - 0s 846us/step - loss: 657808.6250
 Epoch 80/100
-40/40 [==============================] - 0s 1ms/step - loss: 657691.1250
+40/40 [==============================] - 0s 821us/step - loss: 657828.5625
 Epoch 81/100
-40/40 [==============================] - 0s 1ms/step - loss: 657656.5000
+40/40 [==============================] - 0s 821us/step - loss: 657607.6250
 Epoch 82/100
-40/40 [==============================] - 0s 1ms/step - loss: 657592.0000
+40/40 [==============================] - 0s 821us/step - loss: 657774.4375
 Epoch 83/100
-40/40 [==============================] - 0s 1ms/step - loss: 657704.6250
+40/40 [==============================] - 0s 846us/step - loss: 657613.3125
 Epoch 84/100
-40/40 [==============================] - 0s 1ms/step - loss: 657833.8125
+40/40 [==============================] - 0s 872us/step - loss: 657681.1875
 Epoch 85/100
-40/40 [==============================] - 0s 1ms/step - loss: 657664.6875
+40/40 [==============================] - 0s 846us/step - loss: 657618.9375
 Epoch 86/100
-40/40 [==============================] - 0s 1ms/step - loss: 657677.1250
+40/40 [==============================] - 0s 872us/step - loss: 657520.8125
 Epoch 87/100
-40/40 [==============================] - 0s 1ms/step - loss: 657788.5625
+40/40 [==============================] - 0s 923us/step - loss: 657673.0000
 Epoch 88/100
-40/40 [==============================] - 0s 2ms/step - loss: 657604.5625
+40/40 [==============================] - 0s 846us/step - loss: 657665.5000
 Epoch 89/100
-40/40 [==============================] - 0s 1ms/step - loss: 657694.2500
+40/40 [==============================] - 0s 846us/step - loss: 657760.5625
 Epoch 90/100
-40/40 [==============================] - 0s 1ms/step - loss: 657787.8750
+40/40 [==============================] - 0s 949us/step - loss: 657590.2500
 Epoch 91/100
-40/40 [==============================] - 0s 1ms/step - loss: 657569.9375
+40/40 [==============================] - 0s 872us/step - loss: 657623.7500
 Epoch 92/100
-40/40 [==============================] - 0s 974us/step - loss: 657641.0625
+40/40 [==============================] - 0s 872us/step - loss: 657706.7500
 Epoch 93/100
-40/40 [==============================] - 0s 1ms/step - loss: 657608.0000
+40/40 [==============================] - 0s 1ms/step - loss: 657691.1250
 Epoch 94/100
-40/40 [==============================] - 0s 949us/step - loss: 657791.5625
+40/40 [==============================] - 0s 718us/step - loss: 657725.9375
 Epoch 95/100
-40/40 [==============================] - 0s 1ms/step - loss: 657725.0000
+40/40 [==============================] - 0s 769us/step - loss: 657512.9375
 Epoch 96/100
-40/40 [==============================] - 0s 923us/step - loss: 657552.1875
+40/40 [==============================] - 0s 795us/step - loss: 657557.8125
 Epoch 97/100
-40/40 [==============================] - 0s 846us/step - loss: 657769.0000
+40/40 [==============================] - 0s 769us/step - loss: 657622.5000
 Epoch 98/100
-40/40 [==============================] - 0s 897us/step - loss: 657629.1250
+40/40 [==============================] - 0s 769us/step - loss: 657548.2500
 Epoch 99/100
-40/40 [==============================] - 0s 897us/step - loss: 657786.8750
+40/40 [==============================] - 0s 846us/step - loss: 657688.7500
 Epoch 100/100
-40/40 [==============================] - 0s 1ms/step - loss: 657672.6250
+40/40 [==============================] - 0s 769us/step - loss: 657529.2500
 </pre>
 </div>
 </div>
@@ -16292,13 +16388,13 @@ Epoch 100/100
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;tensorflow.python.keras.callbacks.History at 0x1ff3cd2cb50&gt;</pre>
+<pre>&lt;tensorflow.python.keras.callbacks.History at 0x27b35e57b80&gt;</pre>
 </div>
 
 </div>
@@ -16307,10 +16403,15 @@ Epoch 100/100
 
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="TRANSFORM-SCALE-AND-FIT-MODEL">TRANSFORM SCALE AND FIT MODEL<a class="anchor-link" href="#TRANSFORM-SCALE-AND-FIT-MODEL">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
@@ -16328,7 +16429,7 @@ Epoch 100/100
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_model</span><span class="p">():</span>
@@ -16351,10 +16452,15 @@ Epoch 100/100
 </div>
 </div>
 
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="PRINT-OUR-PREDICTION">PRINT OUR PREDICTION<a class="anchor-link" href="#PRINT-OUR-PREDICTION">&#182;</a></h4>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">((</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="mi">0</span><span class="p">])))</span>
@@ -16377,7 +16483,7 @@ Epoch 100/100
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[[1750.8268]]
+<pre>[[1752.2333]]
 </pre>
 </div>
 </div>
