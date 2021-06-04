@@ -305,8 +305,8 @@ csco_df = csco_df.apply( pd.to_numeric)</code>
 			<div class="col">
 		<h3 id="ARIMA">ARIMA Time Series Analysis</h3>
 		<p>
-			ARIMA is the acronym for <b>autoregressive integrated moving average</b>.  It is a generalization of the 
-			<b>autoregressive moving average model (ARMA)</b>, where a linear regression model approach is 
+			ARIMA (<b>autoregressive integrated moving average</b>) is a class of statistical models for analyzing and forecasting time series data.
+            It is a generalization of the <b>autoregressive moving average model (ARMA)</b>, where a linear regression model approach is 
 			followed to model the behaviour of a variable (an observed value) during time.
 			Both models are fitted to time series data to better understand
 			the data or to predict future values in the series (forecasting).
@@ -315,18 +315,25 @@ csco_df = csco_df.apply( pd.to_numeric)</code>
 					The <b>AR</b> part of the acronym indicates that the variable of interest is regressed on its own past values.
 				</li>
 				<li>
-					The <b>I</b> part indicates that the data has been replaced with the difference between each value and 
-						previous one. 
+					The <b>I</b> part indicates the number of differencing operations that need to be performed to the data 
+					to make it stationary. At each differencing, each value in the series has been replaced with the difference with previous one. 
 				</li>
-				<li> The <b>MA</b> part indicates that the regresion error is a linear combination of error terms .
+				<li> The <b>MA</b> part is a model that uses the dependency between an observation and a 
+					 residual error from a moving average model applied to previous observations.
 				</li>
 			</ul>
 		</p>
+		<p>The formula for the ARIMA model looks like this:</p>
+		<img src="/ml/images/ARIMA_Equation.png"><br><br>
+		Where <i>e</i> is the error term and <i>c</i> is constant.
+		The Y values in the series are a combination of adding and substracting from previous values and also adding and
+		substracting error terms from previous time points.
 		<p>
 			The ARIMA model is characterized by 3 terms (p,d,q): 
 			<b>p</b> is the order of the AR term (the number of autoregressive terms).
 			<b>i</b> is the number of times differencing is needed to achieve stationarity.
-			<b>q</b> is the order of the MA term (the number of lagged forecast errors in the prediction equation).
+			<b>q</b> is the order of the MA term (the number of preceding/lagged values for the error term that are 
+			  added/subtracted to Y. This captures the “moving average” part of ARIMA).
 		</p>
 		<div class="embed-responsive embed-responsive-16by9">
 			<iframe class="embed-responsive-item" src="/ml/ARIMA" allowfullscreen></iframe>
